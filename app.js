@@ -18,14 +18,25 @@ do {
 } while (nota < 0 || nota > 10); //guarda condição
 
 console.log("nota válida: " + nota); */
+
+const r = require('readline-sync');
+while (nota< 0 || nota >10) {
+    nota = parseFloat(r.question("digite uma nota de 0 a 10: "));
+    if (nota> 0 || nota >=10) {
+        console.log("nota válida: " + nota);
+        break;
+    } else {
+        console.log("nota inválida, digite uma nota de 0 a 10");
+    }
+}
 //const r = require('readline-sync');
 
 // variavel
-/* 
+/* // contador para controlar o numero de notas
 let soma = 0;
 let contador = 1;
 
-// contador para controlar o numero de notas
+
 while ( contador <= 5) {
 
     // solicita a nota do usuário
@@ -42,9 +53,9 @@ while ( contador <= 5) {
 let media = soma / 5;
 
 //printa a média e usa toFixed para limitar a 2 casas decimais.
-console.log("A média é: " + media.toFixed(2)); */
+console.log("A média é: " + media.toFixed(2)); 
 
-const r = require('readline-sync');
+ const r = require('readline-sync');
 
 // média com do while
 
@@ -59,4 +70,4 @@ do {
 } while (contadorDoWhile <= 5);
 
 let mediaDoWhile = somaDoWhile / 5;
-console.log("A média é: " + mediaDoWhile.toFixed(2)); //ToFixed explica que é para limitar a quantidade de casas decimais, no caso 2.
+console.log("A média é: " + mediaDoWhile.toFixed(2)); */    
